@@ -1,0 +1,16 @@
+import requests
+
+base_url = 'https://www.flickr.com/services/rest/'
+params = {
+    "api_key":"92783ae14ac8d71f157b7c5f63f6a721",
+    "method":"flickr.photos.getPopular",
+    "user_id":"198986098@N04",
+    "format":"json",
+    "nojsoncallback":"1"
+}
+
+response = requests.get(base_url, params=params)
+
+print(response)
+# print(response.status_code)
+print(response.json())
